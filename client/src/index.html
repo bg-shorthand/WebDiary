@@ -8,60 +8,67 @@
 </head>
 <body>  
   <!-- 다이어리 메인 페이지 -->
-  <header class="diary-header">
-    <h1>병국이와 아이들 Season 2</h1>
-  </header>
-  <main class="diary-main">
-    <h2>Year/Month</h2>
-    <button type="button" class="btn-before-month" title="지난 달 보기"><img src="" alt=""></button>
-    <button type="button" class="btn-after-month" title="다음 달 보기"><img src="" alt=""></button>
-    <section>
-      <ul class="diary-list">
-        <li class="diary-item">
-          <p class="diary-date">
+  <div class="diary">
+    <header class="diary-header">
+      <h1 class="diary-heading">병국이와 아이들 <span>Season 2</span></h1>
+    </header>
+    <main class="diary-main">
+      <h2><span class="diary-main__year">Year</span> <span class="diary-main__month">Month</span></h2>
+      <button type="button" class="btn-before-month" title="지난 달 보기"></button>
+      <button type="button" class="btn-after-month" title="다음 달 보기"></button>
+      <section class="diary-section">
+        <ul class="diary-list">
+          <li class="diary-item">
             <h3 class="diary__title">Hello</h3>
             <span class="date__number">1</span>
             <span class="date__day">MON</span>
-          </p>
-        </li>
-        <!-- 다이어리 읽기 페이지 -->
-        <!-- <section class="diary-content is-active">
-          <h3 class="content-title">Hello</h3>
-          <p class="content-time">
-            <span class="content__year">2020</span>
-            <span class="content__month">Feb</span>
-            <span class="content__date">1</span>
-            <span class="content__day">MON</span>
-          </p>
-          <p class="content-text">blabla</p>
-          <button type="button" class="content-edit" title="다이어리 편집하기">edit</button>
-          <button type="button" class="content-close" title="다이어리 읽기 페이지 나가기">X</button>
-        </section> -->
-      </ul>
-    </section>
-  </main>
-  <footer class="diary-footer">
-    <button type="button" class="diary-plus" title="다이어리 추가하기">+</button>
-    <!-- 다이어리 작성 페이지 -->
-    <!-- <section class="diary-write is-active" role="dialog">
-      <h3 class="write-title">
-        <input type="text" class="write-input">
-      </h3>
-      <p class="write-time">
-        <span class="write__year">2020</span>
-        <span class="write__month">Feb</span>
-        <span class="write__date">1</span>
-        <span class="write__day">MON</span>
-      </p>
-      <textarea type="text" class="write-text"></textarea>
-      <button type="submit" class="write-completed" title="다이어리 쓰기 종료">완료</button>
-      <button type="button" class="write-close" title="다이어리 작성 페이지 나가기">X</button>
-    </section> -->
-    <button type="button" class="calender" title="다이어리 달력">calender</button>
-    <!-- <section class="diary-calender">
+          </li>
+          <!-- <li class="diary-item">
+            <h3 class="diary__title">Hello</h3>
+            <span class="date__number">2</span>
+            <span class="date__day">TUE</span>
+          </li> -->
+          <!-- 다이어리 읽기 페이지 -->
+          <!-- <section class="diary-content is-active">
+            <h3 class="content-title">Hello</h3>
+            <p class="content-time">
+              <span class="content__year">2020</span>
+              <span class="content__month">Feb</span>
+              <span class="content__date">1</span>
+              <span class="content__day">MON</span>
+            </p>
+            <p class="content-text">blabla</p>
+            <button type="button" class="content-edit" title="다이어리 편집하기">edit</button>
+            <button type="button" class="content-close" title="다이어리 읽기 페이지 나가기">X</button>
+          </section> -->
+        </ul>
+      </section>
+    </main>
+    <footer class="diary-footer">
+      <button type="button" class="diary-delete" title="다이어리 삭제하기">-</button>
 
-    </section> -->
-    <!-- 다이어리 달력 페이지 -->
-  </footer>
+      <button type="button" class="diary-plus" title="다이어리 추가하기">+</button>
+      <!-- 다이어리 작성 페이지 -->
+      <!-- <section class="diary-write is-active" role="dialog">
+        <h3 class="write-title">
+          <input type="text" class="write-input">
+        </h3>
+        <p class="write-time">
+          <span class="write__year">2020</span>
+          <span class="write__month">Feb</span>
+          <span class="write__date">1</span>
+          <span class="write__day">MON</span>
+        </p>
+        <textarea type="text" class="write-text"></textarea>
+        <button type="submit" class="write-completed" title="다이어리 쓰기 종료">완료</button>
+        <button type="button" class="write-close" title="다이어리 작성 페이지 나가기">X</button>
+      </section> -->
+      <button type="button" class="calender" title="다이어리 달력">calender</button>
+      <!-- <section class="diary-calender">
+  
+      </section> -->
+      <!-- 다이어리 달력 페이지 -->
+    </footer>
+  </div>
 </body>
 </html>
