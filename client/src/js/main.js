@@ -1,11 +1,13 @@
 import test1 from './test';
 import test2 from './test2';
 
+// import axios from 'axios';
+const axios = require('axios');
+
 test1();
 test2();
 
-fetch('http://localhost:7000/todos')
-  .then(res => res.json())
-  .then(res => {
-    console.log(res);
+axios.get('http://localhost:7000/todos')
+  .then(({ data }) => {
+    console.log(data);
   });
