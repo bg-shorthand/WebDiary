@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Webdiary</title>
+  <script src="https://kit.fontawesome.com/1d6203395d.js" crossorigin="anonymous"></script>
   <script defer src="../dist/js/bundle.js"></script>
 </head>
 <body>  
@@ -25,43 +26,248 @@
           </p>
         </li>
         <!-- 다이어리 읽기 페이지 -->
-        <!-- <section class="diary-content is-active">
-          <h3 class="content-title">Hello</h3>
-          <p class="content-time">
-            <span class="content__year">2020</span>
-            <span class="content__month">Feb</span>
-            <span class="content__date">1</span>
-            <span class="content__day">MON</span>
-          </p>
-          <p class="content-text">blabla</p>
-          <button type="button" class="content-edit" title="다이어리 편집하기">edit</button>
-          <button type="button" class="content-close" title="다이어리 읽기 페이지 나가기">X</button>
-        </section> -->
+        <div class="diary-content-container modal is-active">
+          <section class="diary-content">
+            <h3 class="content-title">Hello</h3>
+            <p class="content-time">
+              <span class="content__year">2020</span>
+              <span class="content__month">Feb</span>
+              <span class="content__date">1</span>
+              <span class="content__day">MON</span>
+            </p>
+            <p class="content-text">blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablav</p>
+            <div class="content-btn">
+              <button type="button" class="content-edit far fa-edit" title="다이어리 편집하기">edit</button>
+              <button type="button" class="content-close fas fa-times" title="다이어리 읽기 페이지 나가기"></button>
+            </div>
+          </section>
+        </div>
       </ul>
     </section>
   </main>
   <footer class="diary-footer">
     <button type="button" class="diary-plus" title="다이어리 추가하기">+</button>
     <!-- 다이어리 작성 페이지 -->
-    <!-- <section class="diary-write is-active" role="dialog">
-      <h3 class="write-title">
-        <input type="text" class="write-input">
-      </h3>
-      <p class="write-time">
-        <span class="write__year">2020</span>
-        <span class="write__month">Feb</span>
-        <span class="write__date">1</span>
-        <span class="write__day">MON</span>
-      </p>
-      <textarea type="text" class="write-text"></textarea>
-      <button type="submit" class="write-completed" title="다이어리 쓰기 종료">완료</button>
-      <button type="button" class="write-close" title="다이어리 작성 페이지 나가기">X</button>
-    </section> -->
+    <!-- <div class="diary-write modal is-active">
+      <section class="diary-write" role="dialog">
+        <h3 class="write-title">
+          <input type="text" class="write-input">
+        </h3>
+        <p class="write-time">
+          <span class="write__year">2020</span>
+          <span class="write__month">Feb</span>
+          <span class="write__date">1</span>
+          <span class="write__day">MON</span>
+        </p>
+        <textarea type="text" class="write-text"></textarea>
+        <button type="submit" class="write-completed" title="다이어리 쓰기 종료">완료</button>
+        <button type="button" class="write-close" title="다이어리 작성 페이지 나가기">X</button>
+      </section>
+    </div> -->
     <button type="button" class="calender" title="다이어리 달력">calender</button>
-    <!-- <section class="diary-calender">
-
-    </section> -->
-    <!-- 다이어리 달력 페이지 -->
+    <!-- 다이어리 달력 모달 페이지 -->
+    <!-- <div class="diary-calender-container">
+      <section class="diary-calender">
+        <header>
+          <h2 class="diary-calender__heading"><span class="diary-calender__year">2021년</span><span class="diary-calender__month">2월</span></h2>
+          <button class="diary-calender__pre-btn fas fa-angle-left">이전</button>
+          <button class="diary-calender__next-btn fas fa-angle-right">이후</button>
+        </header>
+        <table>
+          <tr class="week">
+            <td class="day">SUN</td>
+            <td class="day">MON</td>
+            <td class="day">TUE</td>
+            <td class="day">WED</td>
+            <td class="day">THU</td>
+            <td class="day">FRI</td>
+            <td class="day">SAT</td>
+          </tr>
+          <tr class="week1">
+            <td class="day1">
+              <div class="date"></div>
+              <span class="is-diary">
+              </span>
+            </td>
+            <td class="day2">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day3">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day4">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day5">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day6">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day7">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+          </tr>
+          <tr class="week2">
+            <td class="day8">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day9">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day10">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day11">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day12">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day13">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day14">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+          </tr>
+          <tr class="week3">
+            <td class="day15">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day16">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day17">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day18">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day19">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day20">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day21">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+          </tr>
+          <tr class="week4">
+            <td class="day22">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day23">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day24">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day25">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day26">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day27">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day28">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+          </tr>
+          <tr class="week5">
+            <td class="day29">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day30">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day31">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day32">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day33">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day34">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day35">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+          </tr>
+          <tr class="week6">
+            <td class="day36">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day37">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day38">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day39">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day40">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day41">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+            <td class="day42">
+              <div class="date"></div>
+              <span class="is-diary"></span>
+            </td>
+          </tr>
+        </table>
+        <button class="diary-calender__close-btn fas fa-times"></button>
+      </section>
+    </div> -->
   </footer>
 </body>
 </html>
