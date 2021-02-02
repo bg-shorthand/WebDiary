@@ -14,7 +14,7 @@
 }
 
 .diary-content, .diary-write {
-  background-color: pink;
+  background-color: #FBCDC0;
   width: 600px;
   height: 700px;
   position: absolute;
@@ -42,28 +42,71 @@
     padding-right: 10px;
     text-indent: 1em;
   }
+  .content-btn {
+    width: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+  
+    button {
+      font-size: 30px;
+      width: 30px;
+      height: 30px;
+      overflow: hidden;
+    }
+    .content-edit {
+      font-size: 1.5rem;
+      padding-left: 2px;
+    }
+  }
 }
 
-.content-btn {
-  width: 80px;
+.diary-write {
   display: flex;
-  justify-content: space-between;
+  flex-flow: column nowrap;
   align-items: center;
-  position: absolute;
-  top: 25px;
-  right: 25px;
 
-  button {
+  .write-input {
+    margin: 20px 0 0;
+    text-align: center;
+    font-size: 2rem;
+    border-bottom: 2px solid #5F5AB2;
+  }
+  .write-time {
+    font-size: 1.5rem;
+  }
+  .write-text {
+    margin-top: 20px;
+  }
+  .write-text {
+    flex-grow: 1;
+    width: 100%;
+    border-bottom: 2px solid #5F5AB2;
+    font-size: 2rem;
+    text-indent: 1em;
+  }
+
+  .write-completed {
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 0 20px;
+  }
+
+  .write-close {
+    position: absolute;
+    top: 25px;
+    right: 25px;
     font-size: 30px;
     width: 30px;
     height: 30px;
     overflow: hidden;
-  }
-  .content-edit {
-    font-size: 1.5rem;
-    padding-left: 2px;
+    padding: 0 5px;
   }
 }
+
 ::-webkit-scrollbar {
   width: 10px;
   background-color: transparent;
