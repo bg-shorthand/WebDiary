@@ -7,6 +7,23 @@
   <script defer src="../dist/js/bundle.js"></script>
 </head>
 <body>
-  Hellow World
+
+  <!-- 다이어리 작성 페이지 -->
+  <section class="write" role="dialog">
+    <h3 class="write__title">
+      <input type="text" class="write__title-input">
+    </h3>
+    <p class="write__time">
+      <span class="write__time-year"></span>
+      <span class="write__time-month"></span>
+      <span class="write__time-date"></span>
+      <span class="write__time-day"></span>
+    </p>
+    <textarea type="text" class="write__content"></textarea>
+    <button class="write__completed">완료</button>
+    <button class="write__close">X</button>
+  </section>
+
+  
 </body>
 </html>
