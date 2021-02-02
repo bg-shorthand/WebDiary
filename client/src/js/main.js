@@ -1,5 +1,6 @@
 import test1 from './test';
 import test2 from './test2';
+const axios = require('axios');
 
 const axios = require('axios');
 
