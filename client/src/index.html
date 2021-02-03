@@ -8,9 +8,9 @@
   <script defer src="../dist/js/bundle.js"></script>
 </head>
 <body>  
-  <div class="modal-set">
+  <div class="modal-set is-active">
     <!-- 다이어리 읽기 페이지 -->
-    <div class="diary-content-container modal">
+    <div class="diary-content-container modal is-active">
       <section class="diary-content">
         <h3 class="content-title">Hello</h3>
         <p class="content-time">
@@ -44,7 +44,7 @@
     </section>
     </div>
 <!-- 다이어리 달력 모달 페이지 -->
-    <div class="diary-calender-container is-active">
+    <div class="diary-calender-container">
     <section class="diary-calender">
       <header>
         <h2 class="diary-calender__heading"><span class="diary-calender__year">2021년</span><span class="diary-calender__month">2월</span></h2>
@@ -312,12 +312,46 @@
           </li>
 
         </ul>
+        <!-- 다이어리 읽기 페이지 -->
+        <div class="diary-content-container modal">
+          <section class="diary-content">
+            <h3 class="content-title">Hello</h3>
+            <p class="content-time">
+              <span class="content__year">2020</span>
+              <span class="content__month">Feb</span>
+              <span class="content__date">1</span>
+              <span class="content__day">MON</span>
+            </p>
+            <p class="content-text">blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablav</p>
+            <div class="content-btn">
+              <button type="button" class="content-edit far fa-edit" title="다이어리 편집하기">edit</button>
+              <button type="button" class="content-close fas fa-times" title="다이어리 읽기 페이지 나가기"></button>
+            </div>
+          </section>
+        </div>
       </ul>
     </section>
   </main>
   <footer class="diary-footer">
     <button type="button" class="diary-delete fas fa-trash-alt" title="다이어리 삭제하기"></button>
     <button type="button" class="diary-plus fas fa-plus-circle" title="다이어리 추가하기"></button>
+    <!-- 다이어리 작성 페이지 -->
+    <div class="diary-write-comtainer modal">
+      <section class="diary-write" role="dialog">
+        <h3 class="write-title">
+          <input type="text" class="write-input">
+        </h3>
+        <p class="write-time">
+          <span class="write__year">2020</span>
+          <span class="write__month">Feb</span>
+          <span class="write__date">1</span>
+          <span class="write__day">MON</span>
+        </p>
+        <textarea type="text" class="write-text"></textarea>
+        <button type="submit" class="write-completed" title="다이어리 쓰기 종료">CONFIRM</button>
+        <button type="button" class="write-close fas fa-times" title="다이어리 작성 페이지 나가기"></button>
+      </section>
+    </div>
     <button type="button" class="calender far fa-calendar-alt" title="다이어리 달력"></button>
   </footer>
 </body>

@@ -1,8 +1,15 @@
 .modal {
   display: none;
+  width: 1;
+  height: 1;
 }
 
 .modal-set {
+  display: none;
+}
+
+.modal-set.is-active {
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
@@ -32,7 +39,7 @@
     rgba(127, 188, 242, 1) 100%
   );
   width: 600px;
-  height: 700px;
+  height: 600px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -129,6 +136,6 @@
   background-color: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #212121;
+  background-color: rgb(4, 136, 252);
   border-radius: 2.5px;
 }
