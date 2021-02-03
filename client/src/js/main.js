@@ -1,6 +1,6 @@
 import test1 from './test';
 import test2 from './test2';
-const axios = require('axios');
+// const axios = require('axios');
 
 test1();
 test2();
@@ -32,7 +32,7 @@ test2();
 //     console.log(data);
 //   })
 
-axios.delete('http://localhost:7000/diaries/210202')
-  .then(({ data }) => {
-    console.log(data);
-  })
+// axios.delete('http://localhost:7000/diaries/210202')
+//   .then(({ data }) => {
+//     console.log(data);
+//   })
