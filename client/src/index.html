@@ -9,24 +9,52 @@
 </head>
 <body>  
   <!-- 다이어리 메인 페이지 -->
-  <div class="diary">
+  <div class="diary-container">
     <header class="diary-header">
-      <h1 class="diary-heading">병국이와 아이들 <span>Season 2</span></h1>
+      <h1 class="diary-heading">병구기와 아이들 <span>Season 2</span></h1>
+      <div class="diary-header__date">
+        <h2><span class="diary-main__year">Year</span> <span class="diary-main__month">Month</span></h2>
+        <button type="button" class="btn-before-month fas fa-angle-left" title="지난 달 보기"></button>
+        <button type="button" class="btn-after-month fas fa-angle-right" title="다음 달 보기"></button>
+      </div>
     </header>
     <main class="diary-main">
-      <h2><span class="diary-main__year">Year</span> <span class="diary-main__month">Month</span></h2>
-      <button type="button" class="btn-before-month" title="지난 달 보기"></button>
-      <button type="button" class="btn-after-month" title="다음 달 보기"></button>
       <section class="diary-section">
         <ul class="diary-list">
           <li class="diary-item">
             <h3 class="diary__title">Hello</h3>
             <span class="date__number">1</span>
             <span class="date__day">MON</span>
-          </p>
-        </li>
+          </li>
+          <li class="diary-item">
+            <h3 class="diary__title">Hello</h3>
+            <span class="date__number">1</span>
+            <span class="date__day">MON</span>
+          </li>
+          <li class="diary-item">
+            <h3 class="diary__title">Hello</h3>
+            <span class="date__number">1</span>
+            <span class="date__day">MON</span>
+          </li>
+          <li class="diary-item">
+            <h3 class="diary__title">Hello</h3>
+            <span class="date__number">1</span>
+            <span class="date__day">MON</span>
+          </li>
+          <li class="diary-item">
+            <h3 class="diary__title">Hello</h3>
+            <span class="date__number">1</span>
+            <span class="date__day">MON</span>
+          </li>
+          <li class="diary-item">
+            <h3 class="diary__title">Hello</h3>
+            <span class="date__number">1</span>
+            <span class="date__day">MON</span>
+          </li>
+
+        </ul>
         <!-- 다이어리 읽기 페이지 -->
-        <div class="diary-content-container modal is-active">
+        <div class="diary-content-container modal">
           <section class="diary-content">
             <h3 class="content-title">Hello</h3>
             <p class="content-time">
@@ -46,7 +74,9 @@
     </section>
   </main>
   <footer class="diary-footer">
-    <button type="button" class="diary-plus" title="다이어리 추가하기">+</button>
+    <button type="button" class="diary-delete fas fa-trash-alt" title="다이어리 삭제하기"></button>
+
+    <button type="button" class="diary-plus fas fa-plus-circle" title="다이어리 추가하기"></button>
     <!-- 다이어리 작성 페이지 -->
     <!-- <div class="diary-write modal is-active">
       <section class="diary-write" role="dialog">
@@ -64,7 +94,7 @@
         <button type="button" class="write-close" title="다이어리 작성 페이지 나가기">X</button>
       </section>
     </div> -->
-    <button type="button" class="calender" title="다이어리 달력">calender</button>
+    <button type="button" class="calender far fa-calendar-alt" title="다이어리 달력"></button>
     <!-- 다이어리 달력 모달 페이지 -->
     <!-- <div class="diary-calender-container">
       <section class="diary-calender">
