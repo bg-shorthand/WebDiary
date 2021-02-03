@@ -1,5 +1,7 @@
 .diary-calender-container {
   display: none;
+  width: 1;
+  height: 1;
 }
 
 .diary-calender-container.is-active {
@@ -14,7 +16,13 @@
 }
 
 .diary-calender {
-  background-color: pink;
+  background: rgb(237, 193, 211);
+  background: linear-gradient(
+    166deg,
+    rgba(237, 193, 211, 1) 0%,
+    rgba(219, 192, 216, 1) 35%,
+    rgba(127, 188, 242, 1) 100%
+  );
   width: 600px;
   height: 700px;
   position: absolute;
