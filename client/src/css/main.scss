@@ -38,16 +38,17 @@
   }
 
   h2 {
-    color: #fa5947;
+    color: rgb(4, 136, 252);
     text-align: center;
     font-size: 25px;
     font-weight: 700;
+    // font-family: 'Nanum Pen Script', cursive;
   }
   
   .btn-before-month,
   .btn-after-month {
     font-size: 30px;
-    color: #034f84;
+    color: rgb(3, 117, 218);
     padding: 5px 10px;
   }
 
@@ -62,8 +63,8 @@
   margin-top: 170px;
   // margin-bottom: 50px;
   padding: 20px 40px;
-  height: 510px;
-  overflow: auto;
+  // height: 505px;
+  // overflow: auto;
   background-color: rgba(235, 231, 234, 0.932);
   // background: yellow;
 }
@@ -118,7 +119,7 @@
   // margin: 0 auto;
   padding: 10px 0;
   border-radius: 10px;
-  background: rgb(237, 193, 21);
+  background: rgb(237, 193, 211);
   background: linear-gradient(
     166deg,
     rgba(237, 193, 211, 1) 0%,
@@ -137,7 +138,8 @@
   .diary-plus,
   .calender {
     font-size: 20px;
-    color: #fa5947;
+    color: rgb(4, 136, 252);
+    padding: 0 10px;
   }
 
 }

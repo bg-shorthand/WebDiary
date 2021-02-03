@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Webdiary</title>
+  <title>Web Diary</title>
   <script src="https://kit.fontawesome.com/1d6203395d.js" crossorigin="anonymous"></script>
   <script defer src="../dist/js/bundle.js"></script>
 </head>
 <body>  
-  <div class="modal-set is-active">
+  <div class="modal-set">
     <!-- 다이어리 읽기 페이지 -->
-    <div class="diary-content-container modal is-active">
+    <div class="diary-content-container modal">
       <section class="diary-content">
         <h3 class="content-title">Hello</h3>
         <p class="content-time">
@@ -42,9 +42,9 @@
       <button type="submit" class="write-completed" title="다이어리 쓰기 종료">CONFIRM</button>
       <button type="button" class="write-close fas fa-times" title="다이어리 작성 페이지 나가기"></button>
     </section>
-    </div>
+  </div>
 <!-- 다이어리 달력 모달 페이지 -->
-    <div class="diary-calender-container">
+  <div class="diary-calender-container">
     <section class="diary-calender">
       <header>
         <h2 class="diary-calender__heading"><span class="diary-calender__year">2021년</span><span class="diary-calender__month">2월</span></h2>
@@ -245,8 +245,8 @@
       </table>
       <button class="diary-calender__close-btn fas fa-times"></button>
     </section>
-    </div>
   </div>
+  
   <!-- 다이어리 메인 페이지 -->
   <div class="diary-container">
     <header class="diary-header">
@@ -257,7 +257,7 @@
         <button type="button" class="btn-after-month fas fa-angle-right" title="다음 달 보기"></button>
       </div>
     </header>
-    <main class="diary-main">
+    <div class="diary-main">
       <section class="diary-section">
         <ul class="diary-list">
           <li class="diary-item">
@@ -312,24 +312,23 @@
           </li>
 
         </ul>
-        <!-- 다이어리 읽기 페이지 -->
-        <div class="diary-content-container modal">
-          <section class="diary-content">
-            <h3 class="content-title">Hello</h3>
-            <p class="content-time">
-              <span class="content__year">2020</span>
-              <span class="content__month">Feb</span>
-              <span class="content__date">1</span>
-              <span class="content__day">MON</span>
-            </p>
-            <p class="content-text">blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablav</p>
-            <div class="content-btn">
-              <button type="button" class="content-edit far fa-edit" title="다이어리 편집하기">edit</button>
-              <button type="button" class="content-close fas fa-times" title="다이어리 읽기 페이지 나가기"></button>
-            </div>
-          </section>
-        </div>
-      </ul>
+      <!-- 다이어리 읽기 페이지 -->
+      <div class="diary-content-container modal">
+        <section class="diary-content">
+          <h3 class="content-title">Hello</h3>
+          <p class="content-time">
+            <span class="content__year">2020</span>
+            <span class="content__month">Feb</span>
+            <span class="content__date">1</span>
+            <span class="content__day">MON</span>
+          </p>
+          <p class="content-text">blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablav</p>
+          <div class="content-btn">
+            <button type="button" class="content-edit far fa-edit" title="다이어리 편집하기">edit</button>
+            <button type="button" class="content-close fas fa-times" title="다이어리 읽기 페이지 나가기"></button>
+          </div>
+        </section>
+      </div>
     </section>
   </main>
   <footer class="diary-footer">
