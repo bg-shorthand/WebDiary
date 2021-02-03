@@ -3,8 +3,28 @@ const cors = require('cors');
 
 let diaries = [
   {
-    id: 210202,
-    title: '제목',
+    id: '2021-01-10',
+    title: '봉처리 바보',
+    content: '내용'
+  },
+  {
+    id: '2021-01-21',
+    title: '장지혜',
+    content: '내용'
+  },
+  {
+    id: '2021-02-01',
+    title: '한병국',
+    content: '내용'
+  },
+  {
+    id: '2021-02-02',
+    title: '박혜쭌',
+    content: '내용'
+  },
+  {
+    id: '2021-02-03',
+    title: '배근아',
     content: '내용'
   }
 ];
