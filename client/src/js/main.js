@@ -1,6 +1,7 @@
 import listRender from './main/list-render';
 import modal from './modal/modal';
 
-listRender();
+console.log('main');
 
+listRender();
 modal();

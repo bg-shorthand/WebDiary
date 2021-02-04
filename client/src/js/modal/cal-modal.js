@@ -38,6 +38,4 @@ console.log(thisDate);
 const thisDay = dayNames[today.getDay()];
 console.log(thisDay);
 
-const firstDay = today.getDate() - 4;
-
-export { today, thisYear, thisMonth, thisDate, thisDay, firstDay };
+export { today, thisYear, thisMonth, thisDate, thisDay };
