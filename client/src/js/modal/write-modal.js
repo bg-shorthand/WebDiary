@@ -4,6 +4,7 @@ const $writeDate = document.querySelector('.write__date');
 const $writeDay = document.querySelector('.write__day');
 const $writeInput = document.querySelector('.write-input');
 const $writeText = document.querySelector('.write-text');
+const $writeCompleted = document.querySelector('.write-completed');
 
 const todayDate = new Date();
 
@@ -25,7 +26,13 @@ $writeInput.onkeyup = ({ keyCode, target }) => {
 //   if (content === '') return;
 // };
 
-$writeText.onkey
+// $writeText.onkey
+
+$writeCompleted.onclick = () => {
+  if ($writeInput.textContent === '' || $writeText.textContent === '' ) return;
+  
+}
+
 
 export default () => {
   getDate();
