@@ -3,9 +3,39 @@ const axios = require('axios');
 const $diaryList = document.querySelector('.diary-list');
 const $diaryMainYear = document.querySelector('.diary-main__year');
 const $diaryMainMonth = document.querySelector('.diary-main__month');
+const $btnBeforeMonth = document.querySelector('.btn-before-month');
+const $btnAfterMonth = document.querySelector('.btn-after-month');
 
-$diaryMainYear.textContent = new Date().getFullYear();
-$diaryMainMonth.textContent = new Date().getMonth() + 1;
+// $diaryMainYear.textContent = new Date().getFullYear();
+// $diaryMainMonth.textContent = new Date().getMonth() + 1;
+
+let todayYear = new Date().getFullYear();
+let todayMonth = new Date().getMonth() + 1;
+
+const viewDate = (year, month) => {
+  $diaryMainYear.textContent = year;
+  $diaryMainMonth.textContent = month;
+};
+
+$btnBeforeMonth.onclick = e => {
+  if (todayMonth === 1) { 
+    todayYear += -1;
+    todayMonth = 12;
+  } else {
+    todayMonth += -1;
+  }
+  viewDate(todayYear,todayMonth);
+};
+
+$btnAfterMonth.onclick = e => {
+  if (todayMonth === 12) {
+    todayYear += 1;
+    todayMonth = 1;
+  } else {
+    todayMonth += 1
+  }
+  viewDate(todayYear,todayMonth);
+};
 
 const listRender = diaries => {
   
