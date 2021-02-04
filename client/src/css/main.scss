@@ -31,8 +31,9 @@ body {
 
   .diary-heading {
     text-align: center;
-    font-size: 40px;
+    font-size: 60px;
     color: #4C05E3;
+    font-family: 'OTEnjoystoriesBA';
   }
   
   &__date {
@@ -44,21 +45,21 @@ body {
   
   .diary-heading span {
     display: block;
-    font-size: 30px;
+    font-size: 40px;
   }
 
   h2 {
-    color: rgb(4, 136, 252);
+    color: rgb(248, 148, 6);
     text-align: center;
     font-size: 25px;
     font-weight: 700;
-    // font-family: 'Nanum Pen Script', cursive;
+    font-family: 'CookieRunOTF-Bold';
   }
   
   .btn-before-month,
   .btn-after-month {
     font-size: 30px;
-    color: rgb(3, 117, 218);
+    color: rgb(248, 148, 6);
     padding: 5px 10px;
   }
 
@@ -76,12 +77,10 @@ body {
   // height: 510px;
   flex-grow: 1;
   overflow: auto;
-  background-color: rgba(235, 231, 234, 0.932);
-  // background: yellow;
+  background-color: rgba(232, 236, 241, 1);
 }
 
 .diary-section {
-  // background: skyblue;
 
   .diary-item {
     background: rgb(127, 188, 242);
@@ -97,7 +96,8 @@ body {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    color: #f3e7db;
+    color: #f8f9fc;
+    font-family: 'UhBeemysen';
   }
 
   .diary__title {
@@ -149,7 +149,8 @@ body {
   .diary-plus,
   .calendar {
     font-size: 20px;
-    color: rgb(4, 136, 252);
+    // color: rgb(241, 90, 34);
+    color: rgb(248, 148, 6);
     padding: 0 10px;
   }
 
