@@ -1,7 +1,8 @@
 import listRender from './main/list-render';
-import modal from './modal/modal';
+import readData from './main/read-data';
 
-console.log('main');
+import modal from './modal/modal';
 
 listRender();
 modal();
+document.querySelector('.diary-list').addEventListener('click', readData);
