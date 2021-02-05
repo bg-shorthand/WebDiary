@@ -25,9 +25,9 @@ const getDate = () => {
 const generateId = () => `${year}-${("0" + month).slice(-2)}-${("0" + date).slice(-2)}`;
 
 const addDiaries = () => {
-  axios.post('http://localhost:7000/diaries', 
+  axios.post('http://localhost:7000/diaries',
     { id: generateId(), title: $writeInput.value, content: $writeText.value })
-    .then(res=> res.data)
+    .then(res => res.data)
     .then(listRender);
 };
 
@@ -38,7 +38,7 @@ $writeInput.onkeyup = ({ keyCode, target }) => {
 };
 
 const confirm = () => {
-  if ($writeInput.value === '' || $writeText.value === '' ) return;
+  if ($writeInput.value === '' || $writeText.value === '') return;
   addDiaries();
   $writeInput.value = '';
   $writeText.value = '';

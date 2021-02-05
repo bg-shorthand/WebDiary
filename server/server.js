@@ -79,7 +79,9 @@ app.get('/diaries', (_, res) => {
   res.send(diaries);
 });
 app.get('/diaries/:id', (req, res) => {
-  res.send(diaries.filter(diary => diary.id === +req.params.id));
+  console.log(req.params.id);
+  _diaries = diaries.filter(diary => diary.id === req.params.id);
+  res.send(_diaries);
 });
 app.post('/diaries', (req, res) => {
   const { id, title, content } = req.body;
