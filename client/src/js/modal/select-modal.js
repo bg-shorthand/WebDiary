@@ -13,6 +13,7 @@ export default () => {
   $diaryPlus.onclick = () => {
     $modalSet.classList.add('is-active');
     $diaryWriteContainer.classList.add('is-active');
+    // if ()
   };
   $calendar.onclick = () => {
     $modalSet.classList.add('is-active');

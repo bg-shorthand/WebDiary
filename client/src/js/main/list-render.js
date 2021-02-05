@@ -5,9 +5,9 @@ const $diaryMainYear = document.querySelector('.diary-main__year');
 const $diaryMainMonth = document.querySelector('.diary-main__month');
 const $btnBeforeMonth = document.querySelector('.btn-before-month');
 const $btnAfterMonth = document.querySelector('.btn-after-month');
-
-// $diaryMainYear.textContent = new Date().getFullYear();
-// $diaryMainMonth.textContent = new Date().getMonth() + 1;
+const $diaryPlus = document.querySelector('.diary-plus');
+const $writeInput = document.querySelector('.write-input');
+const $writeText = document.querySelector('.write-text');
 
 let todayYear = new Date().getFullYear();
 let todayMonth = new Date().getMonth() + 1;
@@ -33,21 +33,9 @@ const listRender = diaries => {
           <span class="date__day">${day}</span>
         </li>`;
     }
-
-    // if (`${todayYear}${todayMonth}` === `${new Date(id).getFullYear()}${new Date(id).getMonth()}`) {
-    //   const date = new Date(`${id}`).getDate();
-    //   const day = new Date(`${id}`).toString().slice(0, 3).toUpperCase();
-  
-    //   html += `<li class="diary-item">
-    //       <h3 class="diary__title">${title}</h3>
-    //       <span class="date__number">${date}</span>
-    //       <span class="date__day">${day}</span>
-    //     </li>`;
-    // }
   });
 
   $diaryList.innerHTML = html;
-
 };
 
 window.onload = viewDate(todayYear, todayMonth);
@@ -83,14 +71,30 @@ $btnAfterMonth.onclick = () => {
     .catch(console.error);
 };
 
+const previous = async () => {
+  const list = await axios.get('http://localhost:7000/diaries');
+  const { data: diaries } = list;
+  
+  const todayDate = new Date();
+  const year = todayDate.getFullYear();
+  const month = todayDate.getMonth() + 1;
+  const date = todayDate.getDate();
+  const generateId = () => `${year}-${("0" + month).slice(-2)}-${("0" + date).slice(-2)}`;
+
+  const idList = diaries.map(_diaries => _diaries.id);
+  if (idList.find(id => id === generateId())) {
+    const pre = await axios.get(`http://localhost:7000/diaries/${generateId()}`);
+    const { data: diary } = pre;
+    $writeInput.value = diary[0].title; 
+    $writeText.value = diary[0].content;
+  }
+};
+
+$diaryPlus.addEventListener('click', previous);
+
 export default async () => {
   const list = await axios.get('http://localhost:7000/diaries');
   const { data: diaries } = list;
   // console.log(diaries);
   listRender(diaries);
 };
-
-// State
-// let diaries = [];
-
-
