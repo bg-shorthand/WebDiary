@@ -79,12 +79,26 @@ app.get('/diaries', (_, res) => {
   res.send(diaries);
 });
 app.get('/diaries/:id', (req, res) => {
-  res.send(diaries.filter(diary => diary.id === +req.params.id));
+  _diaries = diaries.filter(diary => diary.id === req.params.id);
+  res.send(_diaries);
 });
 app.post('/diaries', (req, res) => {
-  const newDiary = req.body;
+  const { id, title, content } = req.body;
+
+  if (diaries.filter(v => v.id === id).length) {
+    diaries = diaries.map(v => {
+      if (v.id === id) {
+        return { id, title, content };
+      } else {
+        return v;
+      }
+    })
+  } else {
+    const newDiary = req.body;
     diaries = [newDiary, ...diaries];
-    res.send(diaries)
+  }
+
+  res.send(diaries)
 })
 app.patch('/diaries/:id', (req, res) => {
   const id = +req.params.id;

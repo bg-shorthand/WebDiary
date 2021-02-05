@@ -5,11 +5,15 @@ const isDiary = async () => {
   const { data: diaries } = res;
 
   for (let i = 1; i < 43; i++) {
-    document.querySelector(`.day${i}`).lastElementChild.classList.remove('far', 'fa-star')
+    document.querySelector(`.day${i}`).lastElementChild.classList.remove('far', 'fa-star', 'is-diary-mark')
   }
   diaries.forEach(({ id }) => {
     if (document.getElementById(`${id}`) !== null) {
-      document.getElementById(`${id}`).lastElementChild.classList.add('far', 'fa-star');
+      console.log(document.getElementById(`${id}`));
+      if (document.getElementById(`${id}`).matches('td')) {
+        console.log('td');
+        document.getElementById(`${id}`).lastElementChild.classList.add('far', 'fa-star', 'is-diary-mark');
+      }
     }
   });
 };
