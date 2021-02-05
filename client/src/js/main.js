@@ -3,8 +3,6 @@ import readData from './main/read-data';
 
 import modal from './modal/modal';
 
-console.log('main');
-
 listRender();
 modal();
-readData();
+document.querySelector('.diary-list').addEventListener('click', readData);

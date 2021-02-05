@@ -14,16 +14,16 @@ const $contentText = document.querySelector('.content-text');
 const diaryRender = diary => {
   let html = '';
 
-  diary.forEach(({id, title, content}) => {
-    html += `<section class="diary-content">
-      <h3 class="content-title">${title}</h3>
-      <p class="content-time">
+  diary.forEach(({ id, title, content }) => {
+    html += `<section class="diary-content" id="${id}">
+      <h3 class="content-title" id="${id}">${title}</h3>
+      <p class="content-time" id="${id}">
         <span class="content__year">${id}</span>
         <span class="content__month">Feb</span>
         <span class="content__date">1</span>
         <span class="content__day">MON</span>
       </p>
-      <p class="content-text">${content}</p>
+      <p class="content-text" id="${id}">${content}</p>
       <div class="content-btn">
         <button type="button" class="content-edit far fa-edit" title="다이어리 편집하기">edit</button>
         <button type="button" class="content-close fas fa-times" title="다이어리 읽기 페이지 나가기"></button>
@@ -40,10 +40,13 @@ const diaryRender = diary => {
 //     .then()
 // };
 
-export default async () => {
+export default async e => {
   const list = await axios.get('http://localhost:7000/diaries');
-  const { data: diaries } = list;
-  console.log(diaries);
+  const { data: diary } = list;
 
-  diaryRender(diaries);
+  const targetContent = [...diary].filter(item => {
+    if (item.id === e.target.parentNode.id) return item.id;
+  });
+
+  diaryRender(targetContent);
 };

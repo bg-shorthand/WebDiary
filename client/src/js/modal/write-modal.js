@@ -29,7 +29,7 @@ $writeInput.onkeyup = ({ keyCode, target }) => {
 // $writeText.onkey
 
 $writeCompleted.onclick = () => {
-  if ($writeInput.textContent === '' || $writeText.textContent === '' ) return;
+  if ($writeInput.textContent === '' || $writeText.textContent === '') return;
   
 }
 
