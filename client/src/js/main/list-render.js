@@ -86,8 +86,7 @@ $btnAfterMonth.onclick = () => {
 export default async () => {
   const list = await axios.get('http://localhost:7000/diaries');
   const { data: diaries } = list;
-  console.log(diaries);
-
+  // console.log(diaries);
   listRender(diaries);
 };
 
