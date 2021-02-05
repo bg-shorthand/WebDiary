@@ -4,6 +4,7 @@ import calModalRender from './cal-modal-render';
 import calModalPresent from './cal-modal-present';
 import { preBtnE, nextBtnE } from './cal-modal-move';
 import isDiary from './cal-modal-isDiary';
+import readDiary from './cal-modal-readDiary';
 
 const $diaryCalendarPreBtn = document.querySelector('.diary-calendar__pre-btn');
 const $diaryCalendarNextBtn = document.querySelector('.diary-calendar__next-btn');
@@ -19,6 +20,7 @@ export default () => {
   document.querySelector('.calendar').addEventListener('click', isDiary);
   $diaryCalendarPreBtn.addEventListener('click', isDiary);
   $diaryCalendarNextBtn.addEventListener('click', isDiary);
+  document.querySelector('table').addEventListener('click', readDiary);
   
   calModalPresent();
 }

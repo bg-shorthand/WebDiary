@@ -10,8 +10,6 @@ const $writeClose = document.querySelector('.write-close');
 const $diaryCalendarCloseBtn = document.querySelector('.diary-calendar__close-btn');
 
 export default () => {
-  console.log('selectModal');
-
   $diaryPlus.onclick = () => {
     $modalSet.classList.add('is-active');
     $diaryWriteContainer.classList.add('is-active');
@@ -25,9 +23,6 @@ export default () => {
     if (e.target.matches('ul')) return;
     $modalSet.classList.add('is-active');
     $diaryContentContainer.classList.add('is-active');
-    console.log(e.target);
-    console.log(e.target.parentNode.id);
-
   };
   
   $contentClose.onclick = () => {
