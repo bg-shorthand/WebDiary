@@ -2,6 +2,7 @@
   display: none;
   width: 1;
   height: 1;
+  font-family: 'CookieRun-Regular';
 }
 
 .diary-calendar-container.is-active {
@@ -44,6 +45,7 @@
       width: 30px;
       height: 30px;
       overflow: hidden;
+      color: rgb(248, 148, 6);
     }
 
   }
@@ -52,6 +54,8 @@
     text-align: center;
     display: inline-block;
     width: 50%;
+    font-family: 'CookieRunOTF-Bold';
+    color: rgb(248, 148, 6);
   }
   &__pre-btn {
     order: -1;
@@ -63,29 +67,32 @@
     width: 100%;
     border-collapse: collapse;
     text-align: center;
+    font-size: 0.8rem;
+    
+    .week > td {
+      border-bottom: 1px solid black;
+    }
+    .week > td:first-child {
+      color: red;
+    }
+    .week > td:last-child {
+      color: blue;
+    }
 
     td {
-      border-right: 1px solid black;
-      border-bottom: 1px solid black;
       height: 70px;
     }
 
     tr:last-child td {
       border-bottom: none;
     } 
-
-    tr.week {
-      background-color: white;
-    }
-
-    td:first-child {
-      background-color: rgba(255, 0, 0, 0.2);
-    }
     
     td:last-child {
       border-right: none;
-      background-color: rgba(0, 0, 255, 0.2);
     }
+    // .week1 > td, .week2 > td, .week3 > td, .week4 > td, .week5 > td, .week6 > td {
+    //   padding-top: 6px;
+    // }
   }
 
   &__close-btn {
