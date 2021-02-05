@@ -21,8 +21,7 @@ const listRender = diaries => {
   let html = '';
 
   diaries.forEach(({ id, title }) => {
-    const today = new Date(id)
-    // if ( h.getMonth() === new Date().getMonth() ) {
+    const today = new Date(id);
     if ( todayYear === today.getFullYear() && todayMonth === today.getMonth() + 1 ) {
       const date = today.getDate();
       const day = today.toString().slice(0, 3).toUpperCase();
@@ -61,7 +60,7 @@ $btnAfterMonth.onclick = () => {
     todayYear += 1;
     todayMonth = 1;
   } else {
-    todayMonth += 1
+    todayMonth += 1;
   }
   viewDate(todayYear, todayMonth);
   // listRender();
