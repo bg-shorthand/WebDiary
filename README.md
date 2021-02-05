@@ -1,4 +1,7 @@
 # Web Diary
+바닐라 자바스크립트 웹 다이어리 프로젝트  
+[발표자료](https://docs.google.com/presentation/d/1B9A76HD1Zn_pYj7ktDLHrSmXicv_ICSeNd0Q5qD0fZE/edit?usp=sharing)
+
 ![MIT](https://img.shields.io/badge/license-MIT-brightgreen)
 ![HTML5](https://img.shields.io/badge/HTML-5-orange)
 ![SCSS](https://img.shields.io/badge/SCSS-1.32.6-red)
@@ -8,8 +11,6 @@
 ![Express](https://img.shields.io/badge/Express-Framework-brightgreen)
 ![Axios](https://img.shields.io/badge/Axios-PromiseAPI-yellow)
 ![Documentation](https://img.shields.io/badge/documentation-yes-green)
-
-바닐라 자바스크립트 웹 다이어리 프로젝트
 
 ## TEAM : 계란한판 (Average 30)
 한병국 @bg_shorthand  
