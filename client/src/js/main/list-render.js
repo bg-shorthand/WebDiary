@@ -47,7 +47,7 @@ const listRender = diaries => {
       const date = new Date(`${id}`).getDate();
       const day = new Date(`${id}`).toString().slice(0, 3).toUpperCase();
   
-      html += `<li class="diary-item">
+      html += `<li class="diary-item" id="${id}">
           <h3 class="diary__title">${title}</h3>
           <span class="date__number">${date}</span>
           <span class="date__day">${day}</span>

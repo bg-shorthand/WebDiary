@@ -24,6 +24,9 @@ export default () => {
     if (e.target.matches('ul')) return;
     $modalSet.classList.add('is-active');
     $diaryContentContainer.classList.add('is-active');
+    console.log(e.target);
+    console.log(e.target.parentNode.id);
+
   };
   
   $contentClose.onclick = () => {
