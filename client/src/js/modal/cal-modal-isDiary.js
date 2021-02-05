@@ -9,7 +9,11 @@ const isDiary = async () => {
   }
   diaries.forEach(({ id }) => {
     if (document.getElementById(`${id}`) !== null) {
-      document.getElementById(`${id}`).lastElementChild.classList.add('far', 'fa-star', 'is-diary-mark');
+      console.log(document.getElementById(`${id}`));
+      if (document.getElementById(`${id}`).matches('td')) {
+        console.log('td');
+        document.getElementById(`${id}`).lastElementChild.classList.add('far', 'fa-star', 'is-diary-mark');
+      }
     }
   });
 };

@@ -6,6 +6,7 @@ import { preBtnE, nextBtnE } from './cal-modal-move';
 import isDiary from './cal-modal-isDiary';
 import readDiary from './cal-modal-readDiary';
 
+const today = new Date();
 const $diaryCalendarPreBtn = document.querySelector('.diary-calendar__pre-btn');
 const $diaryCalendarNextBtn = document.querySelector('.diary-calendar__next-btn');
 const $writeCompleted = document.querySelector('.write-completed');
@@ -14,7 +15,7 @@ export default () => {
   selectModal();
   getDate();
   $writeCompleted.addEventListener('click', confirm);
-  document.querySelector('.calendar').addEventListener('click', calModalRender(new Date()));
+  document.querySelector('.calendar').addEventListener('click', calModalRender(today));
   $diaryCalendarPreBtn.addEventListener('click', preBtnE);
   $diaryCalendarNextBtn.addEventListener('click', nextBtnE);
   document.querySelector('.calendar').addEventListener('click', isDiary);
