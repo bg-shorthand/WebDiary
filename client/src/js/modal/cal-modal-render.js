@@ -4,8 +4,8 @@ const $diaryCalendarMonth = document.querySelector('.diary-calendar__month');
 export default date => {
   const renderDate = new Date(date);
 
-  $diaryCalendarYear.textContent = renderDate.getFullYear();
-  $diaryCalendarMonth.textContent = `${renderDate.getMonth() + 1}`;
+  // $diaryCalendarYear.textContent = renderDate.getFullYear();
+  // $diaryCalendarMonth.textContent = `${renderDate.getMonth() + 1}`;
 
   const firstDay = new Date(`${renderDate.getFullYear()}-${renderDate.getMonth() + 1}-1`);
 
