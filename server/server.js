@@ -3,6 +3,16 @@ const cors = require('cors');
 
 let diaries = [
   {
+    id: '2020-10-12',
+    title: '진영이 귀요미',
+    content: '내용'
+  },
+  {
+    id: '2020-10-29',
+    title: '하주니 25살 실화인가여?',
+    content: '내용'
+  },
+  {
     id: '2020-11-02',
     title: '은진언니 예뽀요',
     content: '내용'
@@ -39,7 +49,7 @@ let diaries = [
   },
   {
     id: '2021-01-21',
-    title: '장지혜',
+    title: '지혜 죠아조앙',
     content: '내용'
   },
   {
